@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Using CSS Grid</title>
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+
+        #content {
+            display: grid;
+            /* grid-template-columns: 33.3% 33.3% 33.3%; */
+            /* grid-template-columns: 1fr 1fr 2fr; */
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-auto-rows: minmax(200px, auto); */
+            /* grid-template-rows: 200px 300px 400px 200px; */
+            grid-template-rows: repeat(3, minmax(200ppx, auto));
+
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            grid-gap: 5px;
+            
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            /* margin: 20px; */
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+            /* padding: 30px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <div>1</div>
+        <div>2</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero provident voluptate obcaecati eos dignissimos
+            dolorem dolor nesciunt, atque quam quos! Ea qui error, nihil optio iste deleniti dolorum fuga minima!Qui
+            laborum eos natus, nihil tempora corporis ipsam suscipit quae iste earum odit illum et consequatur dolorum
+            veritatis quia minus voluptates omnis sunt eaque! Repudiandae sint harum accusantium alias explicabo.</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </div>
+
+</body>
+
+</html>
